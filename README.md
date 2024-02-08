@@ -9,7 +9,7 @@ The project is a web application for playing the game Rock, Paper, Scissors. Use
 
 ## Demo
 
-[small explanation](https://youtu.be/E5vevMJCOgk)
+[small explanation](https://youtu.be/E5vevMJCOgk)  <-- This is a Youtube video
 
 ## Usage ( step by step )
 1. clone the repository
