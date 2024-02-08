@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+p {
+  margin: 0;
+}
+
+body,
+html {
+  height: 100vh;
+}
+.main {
+  background-image: url("./opt2.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+@media (max-width: 720px) {
+  .main {
+    background-size: auto;
+  }
+}
+
+h1 {
+  color: white !important;
+  -webkit-text-stroke: 2px black;
+  font-size: 5rem;
+  text-align: center;
+}
+.autor {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  font-size: 1.5rem;
+  font-style: italic;
+  color: gray;
+}

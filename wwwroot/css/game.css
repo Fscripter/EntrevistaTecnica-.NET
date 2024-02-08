@@ -1,0 +1,348 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-user-drag: none;
+  box-sizing: border-box;
+}
+p {
+  margin: 0;
+}
+
+body,
+html {
+  height: 100vh;
+  width: 100vw;
+}
+.play-zone {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    -webkit-user-select: none;
+    background-image: url("../img/opt3.jpg");
+}
+.play-zone-top {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.play-zone-top-name {
+  width: 10%;
+  border: 2px solid black;
+  border-radius: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: #746bdf;
+}
+.play-zone-top-name:first-child {
+  background-color: #df6b6b;
+}
+
+.play-zone-top-name p {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: white;
+  justify-content: center;
+  font-size: 1.2vw;
+  margin: 0;
+}
+.play-zone-top-round {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.play-zone-top-round-history {
+  width: 100%;
+  border: 2px solid black;
+  border-radius: 28px;
+  height: 100%;
+  padding: 0px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+.play-zone-top-round-history-box {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  margin-right: 10px;
+}
+.play-zone-cards {
+  margin-top: 50px;
+  width: 100%;
+  height: 70%;
+  display: flex;
+  justify-content: space-around;
+  align-items: space-around;
+}
+.play-zone-cards-player {
+  width: 45%;
+  height: 70%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.play-zone-cards-player .game-cards {
+  height: 80%;
+  width: 25%;
+  border: 2px solid black;
+  border-radius: 38px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.game-cards:hover {
+  background-color: black;
+  box-shadow: 15px 15px 15px gray;
+  cursor: pointer;
+  color: white;
+}
+.game-cards-img {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.game-cards-img img {
+  height: 100%;
+}
+.game-cards p {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+}
+.divisor {
+  width: 3px;
+  background-color: black;
+  height: 100%;
+}
+.crown {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: white;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 2rem;
+  transition: 0.5s ease;
+}
+.selected-1 {
+  background-color: #df6b6b;
+}
+.selected-2 {
+  background-color: #746bdf;
+}
+@media (max-width: 1024px) {
+  .play-zone {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    -webkit-user-select: none;
+  }
+  .play-zone-top {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  .play-zone-top-name {
+    width: 50%;
+    border: 2px solid black;
+    border-radius: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5%;
+    background-color: #746bdf;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    max-width: 200px;
+  }
+
+  .play-zone-top-name:first-child {
+    top: 15%;
+    background-color: #df6b6b;
+  }
+  .play-zone-top-name p {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: white;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  .play-zone-top-round {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .play-zone-top-round-history {
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 28px;
+    height: 100%;
+    padding: 0px 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    overflow: hidden auto;
+  }
+  .play-zone-top-round-history-box {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    margin-right: 10px;
+  }
+  .play-zone-cards {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: space-around;
+    flex-direction: column;
+  }
+  .play-zone-cards-player {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .play-zone-cards-player .game-cards {
+    height: 60%;
+    width: 25%;
+    border: 2px solid black;
+    border-radius: 38px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .game-cards:hover {
+    background-color: lightgray;
+    box-shadow: 15px 15px 15px gray;
+    cursor: pointer;
+  }
+  .game-cards-img {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .game-cards-img img {
+    height: 100%;
+  }
+  .game-cards p {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+  }
+  .divisor {
+    width: 3px;
+    background-color: black;
+    height: 100%;
+  }
+  .crown {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: white;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 2rem;
+    transition: 0.5s ease;
+  }
+  .player-style {
+    position: absolute;
+    top: 30px;
+    width: 200px;
+    left: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #df6b6b;
+    border-radius: 28px;
+  }
+  .player-style p {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+  }
+  .autor {
+    display: none;
+  }
+}
+#GameOver {
+  background-image: url("../opt2.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.options-boxes {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+}
+.history-0{
+    background-color: lawngreen;
+}
+.history-1 {
+    background-color: #df6b6b;
+}
+.history-2 {
+    background-color: #746bdf;
+}

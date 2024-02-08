@@ -1,0 +1,138 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/homepage.css">
+    <link rel="stylesheet" href="~/css/create.css">
+    <link rel="stylesheet" href="~/css/game.css">
+    <script src="~/js/ronda.js"></script>
+    <script src="~/js/game.js" defer></script>
+    <script src="~/js/user.js" defer></script>
+</head>
+<body>
+    <div class="register-zone container-fluid" id="form-create-zone-unic">
+        <div id="player-1" class="player-form">
+            <div class="player-style">
+                <p>Jugador # 1</p>
+            </div>
+            <p id="player-1-nombre-active"></p>
+            <form action="" id="player-1-form">
+                <div class="form-group">
+                    <label for="player-1-nombre">Nombre (s)</label>
+                    <input type="text" class="form-control" id="player-1-nombre" aria-describedby="emailHelp" placeholder="Ingresa tu nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="player-1-apellido">Apellido (s)</label>
+                    <input type="text" class="form-control" id="player-1-apellido" aria-describedby="emailHelp" placeholder="Ingresa tu nombre" required>
+                    <small id="emailHelp" class="form-text text-muted">No compartiremos tu informacion con nadie.</small>
+                </div>
+                <button type="submit" class="btn btn-primary">Agregar usuario #1</button>
+            </form>
+        </div>
+        <div class="vs">
+            <img src="vs.png" alt="">
+        </div>
+        <div id="player-2" class="player-form">
+            <div class="player-style">
+                <p>Jugador # 2</p>
+            </div>
+            <p id="player-2-nombre-active"></p>
+            <form action="" id="player-2-form">
+                <div class="form-group">
+                    <label for="player-2-nombre">Nombre (s)</label>
+                    <input type="text" class="form-control" id="player-2-nombre" aria-describedby="emailHelp" placeholder="Ingresa tu nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="player-2-apellido">Apellido (s)</label>
+                    <input type="text" class="form-control" id="player-2-apellido" aria-describedby="emailHelp" placeholder="Ingresa tu nombre" required>
+                    <small id="emailHelp" class="form-text text-muted">No compartiremos tu informacion con nadie.</small>
+                </div>
+                <button type="submit" class="btn btn-primary">Agregar usuario #2</button>
+            </form>
+        </div>
+    </div>
+    <div class="play-zone">
+        <div class="play-zone-top">
+            <div class="play-zone-top-name">
+                <p>Jugador #1</p>
+            </div>
+            <div class="play-zone-top-round">
+                <h2>Ronda #<span id="round-number"></span></h2>
+                <div class="play-zone-top-round-history">
+                    <div class="play-zone-top-round-history-box"><p>W</p></div>
+                    <div class="play-zone-top-round-history-box"><p>W</p></div>
+                    <div class="play-zone-top-round-history-box"><p>W</p></div>
+                </div>
+            </div>
+            <div class="play-zone-top-name">
+                <p>Jugador #2</p>
+            </div>
+        </div>
+        <div class="play-zone-cards">
+            <div class="play-zone-cards-player">
+                <div class="game-cards piedra">
+                    <div class="game-cards-img">
+                        <img src="~/img/piedra.png" alt="">
+                    </div>
+                    <p>Piedra</p>
+                </div>
+                <div class="game-cards papel">
+                    <div class="game-cards-img">
+                        <img src="~/img/papel.png" alt="">
+                    </div>
+                    <p>Papel</p>
+                </div>
+                <div class="game-cards tijera">
+                    <div class="game-cards-img">
+                        <img src="~/img/tijera.png" alt="">
+                    </div>
+                    <p>Tijera</p>
+                </div>
+            </div>
+            <div class="divisor"></div>
+            <div class="play-zone-cards-player">
+                <div class="game-cards piedra">
+                    <div class="game-cards-img">
+                        <img src="~/img/piedra.png" alt="">
+                    </div>
+                    <p>Piedra</p>
+                </div>
+                <div class="game-cards papel">
+                    <div class="game-cards-img">
+                        <img src="~/img/papel.png" alt="">
+                    </div>
+                    <p>Papel</p>
+                </div>
+                <div class="game-cards tijera">
+                    <div class="game-cards-img">
+                        <img src="~/img/tijera.png" alt="">
+                    </div>
+                    <p>Tijera</p>
+                </div>
+            </div>
+        </div>
+        <div class="crown">
+            <img src="~/img/crown.png" alt="">
+            <p id="Winner"></p>
+        </div>
+    </div>
+    <div class="options" id="GameOver">
+        <div class="title"><h2>¿Deseas reiniciar la ronda o iniciar como nuevos usuarios?</h2></div>
+        <div class="options-boxes">
+            <div class="options-box"><button type="button" class="btn btn-success btn-lg" id="restart">Reiniciar Partida</button></div>
+            <div class="options-box"><button type="button" class="btn btn-danger btn-lg" id="reboot">Iniciar como otros usuarios</button></div>
+        </div>
+    </div>
+    <audio src="~/audio/win.mp3" id="win-audio"></audio>
+    <div class="autor">
+        <p>Developed by: Fscripter</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
